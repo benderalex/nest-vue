@@ -18,7 +18,7 @@ Quick start for a project using docker-compose + nestjs + react|vue + postgresql
 1. Clone the repository to your local machine:
 
    ```
-   git clone https://github.com/bendera/nest-vue
+   git clone https://github.com/benderalex/nest-vue
    ```
 
 2. Navigate to the repository directory:
