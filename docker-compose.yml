@@ -1,0 +1,44 @@
+version: "3.8"
+services:
+  backend:
+    container_name: backend
+    restart: always
+    image: node:16
+    working_dir: /app
+    build:
+      context: ./
+      dockerfile: Dockerfile.42-node
+    volumes:
+      - ./backend/:/app
+    ports:
+      - "3000:3000"
+    command: sh -c 'npm install && npm run start:dev'
+    depends_on:
+      - postgres
+
+  frontend:
+    container_name: frontend
+    restart: always
+    image: node:16
+    volumes:
+      - ./frontend/:/app
+    working_dir: /app
+    ports:
+      - "8080:8080"
+    command: sh -c 'npm i &&  npm run dev -- --host --port=8080'
+
+  postgres:
+    image: library/postgres:13.6
+    ports:
+      - "5432:5432"
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: rootpassword
+      POSTGRES_USER: root
+      POSTGRES_DB: test
+    volumes:
+      - postgresql:/var/lib/postgresql/data
+
+volumes:
+  postgresql:
+    driver: local
