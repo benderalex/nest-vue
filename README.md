@@ -1,5 +1,15 @@
 Quick start for a project using docker-compose + nestjs + react|vue + postgresql
 
+
+<img src="https://nestjs.com/img/logo-small.svg" alt="Nest.js" width="200" />
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/320px-React-icon.svg.png" alt="React" width="200" />
+
+<img src="https://vuejs.org/images/logo.png" alt="Vue.js" width="200" />
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Postgresql_elephant.svg/1200px-Postgresql_elephant.svg.png" alt="PostgreSQL" width="200" />
+
+
 ## Prerequisites
 - Docker
 - Docker Compose
